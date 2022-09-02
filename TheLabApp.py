@@ -1,6 +1,3 @@
-from sare.py import *
-
-
 commands = ['quit',
  	'add', 
  	'subtract',
