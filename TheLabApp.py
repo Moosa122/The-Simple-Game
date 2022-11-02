@@ -23,7 +23,6 @@ while running:
 		num2 = input(prompt1)
 		sum = float(num2)+float(num1)
 		print(sum)
-		word1 = input(prompt)
 		
 	if word1 == commands[2]:
 		prompt1 = 'Put First Number: '
@@ -32,7 +31,6 @@ while running:
 		num2 = input(prompt1)
 		sum = float(num1)-float(num2)
 		print(sum)
-		word1 = input(prompt)
 		
 	if word1 == commands[3]:
 		prompt1 = 'Put First Number: '
@@ -41,7 +39,6 @@ while running:
 		num2 = input(prompt1)
 		sum = float(num1)*float(num2)
 		print(sum)
-		word1 = input(prompt)
 		
 	if word1 == commands[4]:
 		prompt1 = 'Put First Number: '
@@ -50,16 +47,18 @@ while running:
 		num2 = input(prompt1)
 		sum = float(num1)/float(num2)
 		print(sum)
-		word1 = input(prompt)
 		
-	if word1 != commands[0] or commands[1] or commands[2] or commands[3] or commands[4] or commands [5] or commands[6]:
-		print('No Command By That Word')
-		word1 = input(prompt)
+	for command in commands:
+		if word1 != command:
+			print(f"Enter valid command not {word1}")
+		else:
+			break
 		
 	if word1 == commands[6]:
-		Main()
+		print("No game available")
 		
 
 	if word1 == commands[5]:
 		print(commands)
-		word1 = input(prompt)
+	
+	word1 = input(prompt)
